@@ -123,6 +123,22 @@ export function FailureLogs({ onRemoveFromList }: FailureLogsProps) {
         </div>
         
         <div className="flex items-center gap-2">
+          <Button
+            onClick={() => {
+              const testEmail = `teste-${Date.now()}@exemplo.com`
+              const testError = 'Erro de teste - e-mail inválido'
+              addFailureLog(testEmail, testError, 'Teste Manual')
+              toast({
+                title: "Log de teste adicionado",
+                description: "Um log de teste foi criado para verificar o funcionamento.",
+              })
+            }}
+            variant="outline"
+            size="sm"
+            className="bg-blue-50 text-blue-700 hover:bg-blue-100"
+          >
+            🧪 Teste
+          </Button>
           {selectedLogs.length > 0 && (
             <Button
               variant="destructive"
