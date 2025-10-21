@@ -7,8 +7,5 @@
     "app/api/**/*.ts": {
       "maxDuration": 30
     }
-  },
-  "env": {
-    "SENDGRID_API_KEY": "@sendgrid_api_key"
   }
 }
